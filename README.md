@@ -1,4 +1,5 @@
-# Joguinho de Xadrez em Bash (v1.0)
+# Joguinho de Xadrez em Bash (v1.1)
+# Correção de bugs
 
 Um motor de xadrez multiplayer escrito inteiramente em Bash, com suporte a Xeque-mate, Ranking, múltiplos idiomas, modo Blitz e uma nova ajuda de VPN/IP. Este projeto demonstra como criar uma interface interativa e lógica de jogo complexa usando apenas ferramentas de shell.
 
