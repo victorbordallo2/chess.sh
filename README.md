@@ -43,13 +43,13 @@ sudo apt install -y bash ncurses-bin netcat-openbsd coreutils wget
 4. Baixe o script diretamente do GitHub:
 
 ```bash
-wget -O Joguinho.sh https://raw.githubusercontent.com/victorbordallo2/chess.sh/main/Joguinho.sh
+wget -O Joguinho.sh https://raw.githubusercontent.com/victorbordallo2/chess.sh/main/joguinho.sh
 ```
 
 ou com `curl`:
 
 ```bash
-curl -L -o Joguinho.sh https://raw.githubusercontent.com/victorbordallo2/chess.sh/main/Joguinho.sh
+curl -L -o Joguinho.sh https://raw.githubusercontent.com/victorbordallo2/chess.sh/main/joguinho.sh
 ```
 
 5. Torne o script executável:
@@ -77,7 +77,7 @@ pkg install -y bash ncurses-utils netcat-openbsd wget coreutils
 4. Baixe o script:
 
 ```bash
-wget -O Joguinho.sh https://raw.githubusercontent.com/victorbordallo2/chess.sh/main/Joguinho.sh
+wget -O Joguinho.sh https://raw.githubusercontent.com/victorbordallo2/chess.sh/main/joguinho.sh
 ```
 
 5. Dê permissão de execução ao arquivo:
@@ -94,7 +94,7 @@ No Windows, o jogo roda melhor no WSL, mas você pode usar somente o Prompt de C
 2. Cole e execute este único comando:
 
 ```cmd
-powershell -Command "wsl --install -d Ubuntu; wsl sudo apt update; wsl sudo apt install -y bash ncurses-bin netcat-openbsd coreutils wget; wsl bash -lc 'wget -O ~/Joguinho.sh https://raw.githubusercontent.com/victorbordallo2/chess.sh/main/Joguinho.sh && chmod +x ~/Joguinho.sh && ./Joguinho.sh'"
+powershell -Command "wsl --install -d Ubuntu; wsl sudo apt update; wsl sudo apt install -y bash ncurses-bin netcat-openbsd coreutils wget; wsl bash -lc 'wget -O ~/Joguinho.sh https://raw.githubusercontent.com/victorbordallo2/chess.sh/main/joguinho.sh && chmod +x ~/Joguinho.sh && ./Joguinho.sh'"
 ```
 
 > Esse comando instala o WSL (se ainda não estiver instalado), atualiza o Ubuntu, instala dependências, baixa o script `Joguinho.sh` e já tenta executá-lo.
@@ -112,7 +112,7 @@ powershell -Command "wsl bash -lc '~/Joguinho.sh'"
 Se você quer apenas baixar o script sem usar Git, basta usar este comando no `cmd`:
 
 ```cmd
-powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/victorbordallo2/chess.sh/main/Joguinho.sh' -OutFile \"$env:USERPROFILE\\Downloads\\Joguinho.sh\""
+powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/victorbordallo2/chess.sh/main/joguinho.sh' -OutFile \"$env:USERPROFILE\\Downloads\\Joguinho.sh\""
 ```
 
 Depois, execute no WSL:
