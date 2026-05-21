@@ -1,4 +1,4 @@
-# Joguinho de Xadrez em Bash (v5.8)
+# Joguinho de Xadrez em Bash (v1.0)
 
 Um motor de xadrez multiplayer escrito inteiramente em Bash, com suporte a Xeque-mate, Ranking, múltiplos idiomas, modo Blitz e uma nova ajuda de VPN/IP. Este projeto demonstra como criar uma interface interativa e lógica de jogo complexa usando apenas ferramentas de shell.
 
@@ -112,7 +112,7 @@ powershell -Command "wsl bash -lc '~/Joguinho.sh'"
 Se você quer apenas baixar o script sem usar Git, basta usar este comando no `cmd`:
 
 ```cmd
-powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/victorbordallo2/chess.sh/main/Joguinho.sh' -OutFile "$env:USERPROFILE\Downloads\Joguinho.sh'"
+powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/victorbordallo2/chess.sh/main/Joguinho.sh' -OutFile \"$env:USERPROFILE\\Downloads\\Joguinho.sh\""
 ```
 
 Depois, execute no WSL:
