@@ -450,6 +450,22 @@ validar_movimento_real() {
     esac
 }
 
+verificar_promocao() {
+    local idx=$1
+    local peca=${tabuleiro[$idx]}
+    local linha=$((idx / 8))
+
+    if [ "$peca" == "P" ] && [ $linha -eq 0 ]; then
+        tabuleiro[$idx]="Q"
+        echo "${msg[promocao]}"
+        sleep 1
+    elif [ "$peca" == "p" ] && [ $linha -eq 7 ]; then
+        tabuleiro[$idx]="q"
+        echo "${msg[promocao]}"
+        sleep 1
+    fi
+}
+
 controle_mira() {
     local tipo_peca=$1
     SELECIONADO=-1
@@ -620,4 +636,3 @@ fechar_jogo
 # Fim do código
 # Autor: Victor Bordallo @victorbordallo2
 # Licença: MIT
-
