@@ -585,12 +585,13 @@ case $MODO in
         echo "-----------------------------------------"
         echo "${msg[waiting_friend]}"
 
-        nc -l -p $PORTA -q 1 > /dev/null
         while true; do
             controle_mira "[A-Z]"; checar_fim_de_jogo
             desenhar_tabuleiro; echo "${msg[sending_move]}"
-            local resposta xo yo xd yd idx_o idx_d
-            resposta=$(echo "$X_ORIGEM $Y_ORIGEM $X_DESTINO $Y_DESTINO" | nc -l -p $PORTA -q 1)
+            echo "$X_ORIGEM $Y_ORIGEM $X_DESTINO $Y_DESTINO" | nc -l -p $PORTA -q 1
+
+            # Aguarda e recebe a jogada do cliente
+            resposta=$(nc -l -p $PORTA -q 1)
             read xo yo xd yd <<< "$(echo $resposta | tr -d '\r')"
             
             idx_o=$((yo * 8 + xo)); idx_d=$((yd * 8 + xd))
@@ -615,7 +616,6 @@ case $MODO in
         echo "${msg[connecting_host]} $IP_REDE"
         while true; do
             desenhar_tabuleiro; echo "${msg[waiting_host_move]}"
-            local jogada xo yo xd yd idx_o idx_d
             jogada=$(nc -w 1000 $IP_REDE $PORTA)
             read xo yo xd yd <<< "$(echo $jogada | tr -d '\r')"
             
